@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>u/coolcato — build log</title>
+<meta name="description" content="Small useful things, shipped fast. World Cup 2026 Hub, Scorr, Snippytime." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0C0D10;
+    --surface:#16181C;
+    --border:#26292E;
+    --text:#E7E8EA;
+    --muted:#8B909A;
+    --accent:#FF6A3D;
+    --live:#34D399;
+    --soon:#F5A524;
+    --mono:'JetBrains Mono', monospace;
+    --body:'Inter', sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--body);
+    min-height:100vh;
+    padding:80px 20px 60px;
+    line-height:1.5;
+  }
+  .wrap{max-width:640px;margin:0 auto;}
+
+  .prompt{
+    font-family:var(--mono);
+    font-size:0.95rem;
+    color:var(--muted);
+    margin-bottom:6px;
+  }
+  .prompt span{color:var(--accent);}
+
+  h1{
+    font-family:var(--mono);
+    font-size:1.5rem;
+    font-weight:700;
+    margin-bottom:8px;
+    letter-spacing:-0.5px;
+  }
+  .cursor{
+    display:inline-block;
+    width:9px;height:20px;
+    background:var(--accent);
+    margin-left:4px;
+    vertical-align:-3px;
+    animation:blink 1s step-end infinite;
+  }
+  @keyframes blink{50%{opacity:0;}}
+
+  .bio{
+    color:var(--muted);
+    font-size:0.95rem;
+    max-width:480px;
+    margin-bottom:56px;
+  }
+
+  .log-label{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .log-label::after{
+    content:'';
+    flex:1;
+    height:1px;
+    background:var(--border);
+  }
+
+  .entry{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    border:1px solid var(--border);
+    background:var(--surface);
+    border-radius:10px;
+    padding:20px 22px;
+    margin-bottom:14px;
+    transition:border-color 0.15s, transform 0.1s;
+  }
+  .entry:hover{
+    border-color:var(--accent);
+    transform:translateX(3px);
+  }
+
+  .entry-top{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+  }
+  .status{
+    font-family:var(--mono);
+    font-size:0.68rem;
+    font-weight:700;
+    letter-spacing:0.5px;
+    color:var(--live);
+    border:1px solid var(--live);
+    border-radius:20px;
+    padding:2px 9px;
+  }
+  .status.soon{
+    color:var(--soon);
+    border-color:var(--soon);
+  }
+  .entry-name{
+    font-family:var(--mono);
+    font-size:1.05rem;
+    font-weight:700;
+  }
+  .entry-fact{
+    font-size:0.9rem;
+    color:var(--text);
+    margin-bottom:4px;
+  }
+  .entry-desc{
+    font-size:0.85rem;
+    color:var(--muted);
+  }
+  .entry-url{
+    font-family:var(--mono);
+    font-size:0.78rem;
+    color:var(--accent);
+    margin-top:10px;
+    display:block;
+  }
+
+  footer{
+    margin-top:56px;
+    font-family:var(--mono);
+    font-size:0.75rem;
+    color:var(--muted);
+    text-align:center;
+  }
+  footer a{color:var(--muted);}
+
+  @media (max-width:600px){
+    body{padding:50px 16px 40px;}
+    h1{font-size:1.25rem;}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="prompt"><span>$</span> whoami</div>
+    <h1>u/coolcato<span class="cursor"></span></h1>
+    <p class="bio">Independent builder based in Melbourne. Designs and ships small, useful web products end to end — from idea through to production.</p>
+
+    <div class="log-label">shipped</div>
+
+    <a class="entry" href="https://kingdoggydog.github.io/worldcup2026" target="_blank" rel="noopener">
+      <div class="entry-top">
+        <span class="status">LIVE</span>
+        <span class="entry-name">World Cup 2026 Hub</span>
+      </div>
+      <div class="entry-fact">114K active users in month one — entirely organic, zero ad spend.</div>
+      <div class="entry-desc">A fan site for the tournament. Live bracket, scores, fixtures.</div>
+      <span class="entry-url">kingdoggydog.github.io/worldcup2026 →</span>
+    </a>
+
+    <a class="entry" href="https://scorr.live" target="_blank" rel="noopener">
+      <div class="entry-top">
+        <span class="status soon">COMING SOON</span>
+        <span class="entry-name">Scorr</span>
+      </div>
+      <div class="entry-fact">Multi-sport scores and fixtures, built session by session.</div>
+      <div class="entry-desc">Live vidiprinter, competition pages, mobile-first design.</div>
+      <span class="entry-url">scorr.live →</span>
+    </a>
+
+    <a class="entry" href="https://snippytime.com" target="_blank" rel="noopener">
+      <div class="entry-top">
+        <span class="status">LIVE</span>
+        <span class="entry-name">Snippytime</span>
+      </div>
+      <div class="entry-fact">Screenshot any webpage. No sign-up, no API key, no code.</div>
+      <div class="entry-desc">Paste a URL, get it emailed to you — instantly or on a schedule.</div>
+      <span class="entry-url">snippytime.com →</span>
+    </a>
+
+    <footer>Melbourne, Australia</footer>
+
+  </div>
+</body>
+</html>
